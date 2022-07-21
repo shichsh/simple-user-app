@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg
+    navbar-light nav-bgcolor">Adelphic</nav>
+
+      <div class="col-2 left-nav-color" id="green">
+          <!-- Navigation links in sidebar-->
+          <a routerLink="/user-grid" routerLinkActive="active"
+          ariaCurrentWhenActive="page">List</a><br />
+          <br />
+          <a routerLink="/add-user" routerLinkActive="active"
+          ariaCurrentWhenActive="page">Add</a><br />
+          <br />
+      </div>
+      <div class="col-10" style="padding: 0;">
+        <router-outlet></router-outlet>
+      </div>
+      
+  </div>
+<br>
+
+</div>

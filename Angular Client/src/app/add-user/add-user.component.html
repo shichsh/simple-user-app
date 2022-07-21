@@ -1,0 +1,55 @@
+<div class="container">
+    <form #user="ngForm" (ngSubmit)="save(user)">
+      <div class="row">
+        <div class="center-align"><label>Add User</label></div>
+        <div class="col-7">
+            <table class="margin-auto">
+                <tr class="form-group">
+                    <td class="align-right"><label for="username">Username:</label></td>
+                    <td class="align-left"><input type="text" name="username" ngModel 
+                        (keypress)="keyPressAlphanumeric($event)"></td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="password">Password:</label></td>
+                    <td class="align-left"><input type="password" name="password" maxlength="32" ngModel 
+                        (keypress)="keyPressAlphanumeric($event)">
+                    </td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="email">Email:</label></td>
+                    <td class="align-left"><input type="email" name="email" ngModel></td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="firstname">First Name:</label></td>
+                    <td class="align-left"><input type="text" name="firstname" ngModel
+                        (keypress)="keyPressForName($event)"></td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="lastname">Last Name:</label></td>
+                    <td class="align-left"><input type="text" name="lastname" ngModel
+                        (keypress)="keyPressForName($event)"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-5">
+            <table>
+                <tr>
+                    <td>
+                        <button class="btn btn-primary btn-block" type="sumbit" style="width: 100%">Save</button><br />
+                    </td>
+                </tr>
+                <br />
+                <tr>
+                    <td>
+                        <button class="btn btn-primary btn-block" routerLink="user-grid">Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    </form>
+  </div>

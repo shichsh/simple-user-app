@@ -1,0 +1,50 @@
+<div class="container">
+    <form #user="ngForm" (ngSubmit)="save(user)">
+      <div class="row">
+        <div class="center-align"><label>Edit User ID: {{editUser?.id}}</label></div>
+        <input type="hidden" name="id" id="id" ngModel="{{editUser?.id}}">
+        <input type="hidden" name="createdDateTime" id="createdDateTime" ngModel="{{editUser?.createdDateTime}}">
+        <div class="col-7">
+            <table class="margin-auto">
+                <tr class="form-group">
+                    <td class="align-right"><label for="username">Username:</label></td>
+                    <td class="align-left"><input type="text" name="username" ngModel="{{editUser?.username}}"
+                        (keypress)="keyPressAlphanumeric($event)"></td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="email">Email:</label></td>
+                    <td class="align-left"><input type="email" name="email" ngModel="{{editUser?.email}}"></td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="firstname">First Name:</label></td>
+                    <td class="align-left"><input type="text" name="firstName" ngModel="{{editUser?.firstName}}"
+                        (keypress)="keyPressForName($event)"></td>
+                </tr>
+                <br />
+                <tr class="form-group">
+                    <td class="align-right"><label for="lastname">Last Name:</label></td>
+                    <td class="align-left"><input type="text" name="lastName" ngModel="{{editUser?.lastName}}"
+                        (keypress)="keyPressForName($event)"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-5">
+            <table>
+                <tr>
+                    <td>
+                        <button class="btn btn-primary" type="sumbit">Save</button><br />
+                    </td>
+                </tr>
+                <br />
+                <tr>
+                    <td>
+                        <button class="btn btn-primary" routerLink="user-grid">Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    </form>
+  </div>
